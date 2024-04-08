@@ -1,0 +1,96 @@
+Questão 1:
+
+SELECT 
+    first_name, 
+    last_name 
+FROM 
+    actors 
+WHERE 
+    gender = 'F';
+
+============================================================
+
+Questão 2:
+
+SELECT 
+    name 
+FROM 
+    movies 
+WHERE 
+    year > 1999;
+
+============================================================
+
+Questão 3:
+
+SELECT 
+    movies.name, 
+    directors.first_name, 
+    directors.last_name 
+FROM 
+    movies 
+JOIN 
+    movies_directors ON movies.id = movies_directors.movie_id 
+JOIN 
+    directors ON movies_directors.director_id = directors.id;
+
+
+============================================================
+
+Questão 4:
+
+SELECT 
+    movies.name, 
+    actors.first_name, 
+    roles.role 
+FROM 
+    movies 
+JOIN 
+    roles ON movies.id = roles.movie_id 
+JOIN 
+    actors ON roles.actor_id = actors.id 
+WHERE 
+    roles.rank > 6;
+
+=============================================================
+
+Questão 5:
+
+SELECT 
+    directors.first_name, 
+    directors.last_name, 
+    COUNT(movies_directors.movie_id) AS movie_count 
+FROM 
+    directors 
+JOIN 
+    movies_directors ON directors.id = movies_directors.director_id 
+GROUP BY 
+    directors.id;
+
+============================================================
+
+Questão 6: 
+
+SELECT 
+    genre, 
+    COUNT(movie_id) AS movie_count 
+FROM 
+    movies_genres 
+GROUP BY 
+    genre;
+
+============================================================
+
+Questão 7:
+
+SELECT 
+    genre, 
+    AVG(rank) AS avg_rank, 
+    MIN(rank) AS min_rank, 
+    MAX(rank) AS max_rank 
+FROM 
+    movies_genres 
+JOIN 
+    movies ON movies_genres.movie_id = movies.id 
+GROUP BY 
+    genre;

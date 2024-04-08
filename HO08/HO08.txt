@@ -1,0 +1,94 @@
+Questão 1:
+
+SELECT 
+    actors.first_name, 
+    actors.last_name
+FROM 
+    actors 
+INNER JOIN 
+    directors ON actors.first_name = directors.first_name 
+    AND actors.last_name = directors.last_name;
+
+=====================================================================
+
+Questão 2:
+
+SELECT 
+    actors.first_name, 
+    actors.last_name 
+FROM 
+    actors 
+FULL OUTER JOIN 
+    directors ON actors.first_name = directors.first_name 
+    AND actors.last_name = directors.last_name;
+
+=====================================================================
+
+Questão 3:
+
+SELECT 
+    first_name, 
+    last_name 
+FROM 
+    actors 
+UNION 
+SELECT 
+    first_name, 
+    last_name 
+FROM 
+    directors;
+
+=====================================================================
+
+Questão 4: 
+
+SELECT 
+    name 
+FROM 
+    movies 
+WHERE 
+    id NOT IN (SELECT movie_id FROM movies_directors);
+
+=====================================================================
+
+Questão 5:
+
+SELECT 
+    actors.first_name, 
+    actors.last_name
+FROM 
+    actors 
+JOIN (
+    SELECT 
+        actor_id 
+    FROM 
+        roles 
+    GROUP BY 
+        actor_id 
+    HAVING 
+        COUNT(movie_id) < 2
+    ) AS table_1 ON actors.id = table_1.actor_id;
+
+=====================================================================
+
+Questão 6:
+
+SELECT 
+    genre, 
+    year, 
+    a 
+FROM 
+    (SELECT 
+        genre, 
+        movie_id, 
+        COUNT(actor_id) AS a
+    FROM 
+        roles 
+    GROUP BY 
+        genre, 
+        movie_id
+    HAVING 
+        COUNT(actor_id) < 2
+    ) AS table_2 
+JOIN 
+    movies ON table_2.movie_id = movies.id;

@@ -1,0 +1,137 @@
+Atores:
+	Registros:
+	Número de Registros: 10.000
+	Espaço dos Registros: 176 bytes
+	Espaço em Disco:
+	Blocagem: 2KB
+	Número de Blocos: 910
+	Espaço Total: 1.77 MB
+	Índice Multinível Estático:
+	Blocagem: 32B
+	Blocos: 16
+	Espaço: 32 KB
+	Altura da Árvore: 3
+
+Funcionários:
+	Registros:
+	Número de Registros: 3.500
+	Espaço dos Registros: 182 bytes
+	Espaço em Disco:
+	Blocagem: 2KB
+	Número de Blocos: 319
+	Espaço Total: 638 KB
+	Índice Multinível Estático (CPF):
+	Blocagem: 27B
+	Blocos: 5
+	Espaço: 12 KB
+	Altura da Árvore: 3
+	Índice Multinível Dinâmico (CPF Supervisor):
+	Blocagem: 62
+	Blocos: 57
+	Espaço: 114 KB
+	Altura da Árvore: 2
+	Índice Multinível Dinâmico (CPF Funcionário):
+	Blocagem: 53
+	Blocos: 67
+	Espaço: 138 KB
+	Altura da Árvore: 3
+
+Clientes:
+	Registros:
+	Número de Registros: 100.000
+	Espaço dos Registros: 400 bytes
+	Espaço em Disco:
+	Blocagem: 2KB
+	Número de Blocos: 20.000
+	Espaço Total: 39.06 MB
+	Índice Multinível Estático (CPF):
+	Blocagem: 27B
+	Blocos: 267
+	Espaço: 536 KB
+	Altura da Árvore: 4
+
+Aluguel:
+	Registros:
+	Número de Registros: 20.000.000
+	Espaço dos Registros: 92 bytes
+	Espaço em Disco:
+	Blocagem: 2KB
+	Número de Blocos: 9.090.091
+	Espaço Total: 1.73 GB
+	Índice Multinível Estático (CPF Cliente):
+	Blocagem: 27B
+	Blocos: 12.122
+	Espaço: 24.246 KB
+	Altura da Árvore: 5
+	Índice Multinível Estático (ID Mídia):
+	Blocagem: 40B
+	Blocos: 17.826
+	Espaço: 35.654 KB
+	Altura da Árvore: 5
+	Índice Multinível Estático (Data Locação):
+	Blocagem: 28B
+	Blocos: 12.454
+	Espaço: 24.910 KB
+	Altura da Árvore: 5
+	Índice Multinível Dinâmico (CPF Cliente):
+	Blocagem: 62
+	Blocos: 322.581
+	Espaço: 645.162 KB
+	Altura da Árvore: 4
+	Índice Multinível Dinâmico (ID Mídia):
+	Blocagem: 40
+	Blocos: 500.000
+	Espaço: 1.000.000 KB
+	Altura da Árvore: 4
+	Índice Multinível Dinâmico (Data Locação):
+	Blocagem: 73
+	Blocos: 1.245.400
+	Espaço: 2.490.800 KB
+	Altura da Árvore: 5
+
+Mídias:
+	Registros:
+	Número de Registros: 10.000.000
+	Espaço dos Registros: 72 bytes
+	Espaço em Disco:
+	Blocagem: 2KB
+	Número de Blocos: 357.143
+	Espaço Total: 697.54 MB
+	Índice Multinível Estático (Identificador):
+	Blocagem: 40B
+	Blocos: 7.003
+	Espaço: 14.008 KB
+	Altura da Árvore: 5
+	Índice Multinível Dinâmico (Cod Filme):
+	Blocagem: 36
+	Blocos: 500.000
+	Espaço: 1.000.000 KB
+	Altura da Árvore: 5
+
+Filmes:
+	Registros:
+	Número de Registros: 2.000.000
+	Espaço dos Registros: 256 bytes
+	Espaço em Disco:
+	Blocagem: 2KB
+	Número de Blocos: 250.000
+	Espaço Total: 488.28 MB
+	Índice Multinível Estático (Código):
+	Blocagem: 32B
+	Blocos: 3.907
+	Espaço: 7.816 KB
+	Altura da Árvore: 4
+
+Pagamentos:
+	Registros:
+	Número de Registros: 50.000.000
+	Espaço dos Registros: 48 bytes
+	Espaço em Disco:
+	Blocagem: 2KB
+	Número de Blocos: 2.387.596
+	Espaço Total: 4.65 GB
+	Índice Multinível Estático (CPF Cliente):
+	Blocagem: 62B
+	Blocos: 38.314
+	Espaço: 76.628 KB
+	Altura da Árvore: 4
